@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecule Animation</title>
+    <style>
+       /* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container styling */
+#container {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #333;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Molecule styling */
+.molecule {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db; /* Modern blue color */
+    border-radius: 50%;
+    position: absolute;
+    transition: background-color 0.5s; /* Smooth color transition */
+}
+
+/* Hover effect for molecules */
+.molecule:hover {
+    background-color: #e74c3c; /* Change color on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #container {
+        width: 90%;
+        height: 90vh;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div class="molecule" id="molecule1"></div>
+    <div class="molecule" id="molecule2"></div>
+    <!-- Add more molecules as needed -->
+    
+</div>
+
+<script>
+    const molecules = document.querySelectorAll('.molecule');
+
+    molecules.forEach(molecule => {
+        let x = Math.random() * 280; // Initial x position
+        let y = Math.random() * 280; // Initial y position
+        let xSpeed = (Math.random() - 0.5) * 4; // Speed in x direction
+        let ySpeed = (Math.random() - 0.5) * 4; // Speed in y direction
+
+        function moveMolecule() {
+            if (x + xSpeed < 0 || x + xSpeed > 280) xSpeed = -xSpeed;
+            if (y + ySpeed < 0 || y + ySpeed > 280) ySpeed = -ySpeed;
+
+            x += xSpeed;
+            y += ySpeed;
+
+            molecule.style.left = x + 'px';
+            molecule.style.top = y + 'px';
+
+            requestAnimationFrame(moveMolecule);
+        }
+
+        moveMolecule();
+    });
+</script>
+
+</body>
+</html>

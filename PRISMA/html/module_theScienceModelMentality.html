@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biological Systems - PRISMA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+</head>
+
+<body class="bg-gray-200 text-gray-800 font-sans leading-normal">
+
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center animate__animated animate__fadeInDown">
+            <div class="text-2xl font-bold">PRISMA</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="landingTailwind.html" class="hover:text-teal-500">Home</a></li>
+                    <li><a href="module_theScienceModelMentality.html" class="hover:text-teal-500">Modules</a></li>
+                    <li><a href="#" class="hover:text-teal-500">About</a></li>
+                    <li><a href="#" class="hover:text-teal-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for The Science Model & Mentality -->
+    <section
+        class="bg-cover bg-center bg-gradient-to-t from-black h-96 text-white text-center flex flex-col justify-center animate__animated animate__fadeIn" style= "background-image: linear-gradient(to bottom, rgba(31, 41, 55, 0), rgb(229, 231, 235)), url('../Images/translucent-leaf.png') ;" >
+        <h1 class="text-5xl mb-4">Levels of Biological Organization</h1>
+        <p class="text-xl mb-8">From molecules to biosphere: understanding the hierarchy.</p>
+        <button
+            class="mx-auto px-8 py-2 bg-teal-500 hover:bg-gray-800 transition-colors duration-300 animate__animated animate__pulse animate__infinite">Start
+            Learning</button>
+    </section>
+
+    <!-- Content Sections specific to The Science Model & Mentality -->
+    <section class="py-12 animate__animated animate__fadeInUp">
+        <div class="container mx-auto">
+            <h2 class="text-3xl mb-6 text-center">Key Concepts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl mb-4">The Scientific Model</h3>
+                    <p>Explanation and details about the scientific model...</p>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-4">The Scientific Mentality</h3>
+                    <p>Insights into the mindset behind scientific inquiry...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Elements Section -->
+    <section class="bg-gray-800 text-white py-12 animate__animated animate__fadeIn">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl mb-6">Interactive Learning</h2>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Biology plant cell" frameborder="0" allowfullscreen
+                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480"
+                    src="https://sketchfab.com/models/0d87fbe2581b4cabae809bd6aaa7d56b/embed?autospin=1&autostart=1&preload=1&ui_theme=dark">
+                </iframe>
+                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                        href="https://sketchfab.com/3d-models/biology-plant-cell-0d87fbe2581b4cabae809bd6aaa7d56b?utm_medium=embed&utm_campaign=share-popup&utm_content=0d87fbe2581b4cabae809bd6aaa7d56b"
+                        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Biology plant cell
+                    </a>
+            </div>
+            <model-viewer camera-controls touch-action="pan-y" alt="A 3D model of a water molecule."
+                src="../3D/h2o_molecule/scene.gltf">
+            </model-viewer>
+            <model-viewer src="../3D/dna/scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                poster="poster.webp" shadow-intensity="0.5" shadow-softness="1" exposure="1"
+                camera-orbit="1044deg 105.4deg 44.98m" field-of-view="17.71deg" min-camera-orbit="-159deg 0deg auto"
+                max-camera-orbit="-87deg 180deg auto">
+                <button class="Hotspot" slot="hotspot-2"
+                    data-position="4.415861230524705m 4.448717728661917m 4.719802084236108m"
+                    data-normal="-0.6840341642031874m 0.7294377816820882m 0.004217209689013045m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">ADN</div>
+                </button>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                
+            </model-viewer>
+
+            <p>Engage with interactive quizzes, videos, and simulations to deepen your understanding.</p>
+            <!-- Add interactive elements here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">PRISMA</div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-teal-500">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-500">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: Include the Animate.css JavaScript to control animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.js"></script>
+
+</body>
+
+</html>
