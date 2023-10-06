@@ -8,6 +8,8 @@
     <title>PRISMA: Multisensory Learning</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 
 <body class="bg-gray-200 text-gray-800 font-sans leading-normal">
@@ -36,15 +38,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section
-        class="bg-cover bg-center bg-gradient-to-t h-96 text-white text-center flex flex-col justify-center animate__animated animate__fadeIn"
-        style="background-image: linear-gradient(to bottom, rgba(31, 41, 55, 0), rgb(229, 231, 235)), url('../Images/translucent-leaf.png') ;">
+    <!-- Hero Section -->
+<section class="relative h-96 flex flex-col justify-center items-center animate__animated animate__fadeIn">
+    <video autoplay muted loop class="absolute w-full h-full object-cover">
+        <source src="/Videos/Try Magic Media.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute w-full h-full bg-gradient-to-b from-transparent to-gray-200"></div>
+    <div class="relative z-10 text-center text-white">
         <h1 class="text-5xl mb-4">Welcome to PRISMA</h1>
         <p class="text-xl mb-8">Experience multisensory learning like never before.</p>
-        <button
-            class="mx-auto px-8 py-2 bg-teal-500 hover:bg-gray-800 transition-colors duration-300 animate__animated animate__pulse animate__infinite">Explore
-            Modules</button>
-    </section>
+        <button class="px-8 py-2 bg-teal-500 hover:bg-gray-800 transition-colors duration-300 animate__animated animate__pulse animate__infinite">Explore Modules</button>
+    </div>
+</section>
+
 
     <!-- Modules Section -->
     <section class="py-12 animate__animated animate__fadeInUp">
